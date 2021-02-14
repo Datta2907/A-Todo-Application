@@ -1,0 +1,70 @@
+body{
+    text-align: center;
+}
+h1{
+    font-family:cursive;
+}
+h5{
+    font-family: cursive;
+    display: inline-block;
+}
+li{
+    display: inline-block;
+}
+ul{
+    padding: 0;
+}
+.ty{
+    margin-top: 1%;
+}
+.bordeer{
+    border:solid;
+}
+.checkb{
+    text-align: left;
+    margin: 0 4% 0 8%;
+}
+.box{
+    display: inline-block;
+    margin: 2% 0 0 7%;
+}
+.bacck{
+    background-color: black;
+}
+.inner{
+    padding:1% 35%;
+}
+.colorr:hover{
+    cursor: pointer;
+}
+.colorr{
+    height: 50px;
+    width:50px;
+    display: inline-block;
+    border-radius: 5%;
+}
+.bodyy{
+    margin:2% 0 4%;
+    padding: 10%;
+    background-color:darkgoldenrod;
+    border-radius:5%;
+}
+.parah{
+    background-color: grey;
+    margin: 1% 40%;
+    height: 55%;
+    overflow: auto;
+    text-align: left;
+    padding-top: 2%;
+    border-radius: 5%;
+}
+.para{
+    margin-bottom: 2%;
+}
+.typelist{
+    display: none;
+}
+.tyy{
+    width:19%;
+    margin:2% auto 1%;
+}
