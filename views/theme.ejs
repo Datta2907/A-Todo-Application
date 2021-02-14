@@ -1,0 +1,82 @@
+<%- include ("header") -%>
+    <script type="text/javascript">
+        function submitk(myy) {
+            const arr = ["black", "pink", "red", "darkgreen", "orangered", "crimson", "coral", "darkkhaki", "fuchsia", "indigo", "chartreuse", "darkmagenta"];
+            document.getElementById(myy).classList.toggle("bordeer");
+            if (document.getElementById(myy).classList.contains("bordeer")) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] != myy) {
+                        document.getElementById(arr[i]).classList.remove("bordeer");
+                    }
+                }
+                document.getElementById("iiid").value = myy;
+            }
+            else {
+                document.getElementById("iiid").value = "ntg";
+            }
+        }
+        function submitit(myform) {
+            const arr = ["deeppink", "teal", "brown", "cyan", "olivedrab","magenta","mediumaquamarine","thistle","steelblue","silver","maroon"];
+            document.getElementById(myform).classList.toggle("bordeer");
+            if (document.getElementById(myform).classList.contains("bordeer")) {
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] != myform) {
+                        document.getElementById(arr[i]).classList.remove("bordeer");
+                    }
+                }
+                document.getElementById("iid").value = myform;
+            }
+            else {
+                document.getElementById("iid").value = "nothing";
+            }
+        }
+    </script>
+    <div class="inner">
+        <h1>Navbar-Colour</h1>
+        <form action="/setcolour" method="POST" id="myyform">
+            <div class="bodyy">
+                <input type="hidden" id="iiid" value="ntg" name="change1">
+                <div style="background-color:black" class="colorr" id="black" onclick="submitk('black')">
+                </div>
+                <div style="background-color: pink" class="colorr" id="pink" onclick="submitk('pink')"></div>
+                <div style="background-color: red" class="colorr" id="red" onclick="submitk('red')"></div>
+                <div style="background-color: darkgreen" class="colorr" id="darkgreen" onclick="submitk('darkgreen')">
+                </div>
+                <div style="background-color: orangered" class="colorr" id="orangered" onclick="submitk('orangered')">
+                </div>
+                <div style="background-color: crimson" class="colorr" id="crimson" onclick="submitk('crimson')"></div>
+                <div style="background-color: coral" class="colorr" id="coral" onclick="submitk('coral')"></div>
+                <div style="background-color: darkkhaki" class="colorr" id="darkkhaki" onclick="submitk('darkkhaki')">
+                </div>
+                <div style="background-color: fuchsia" class="colorr" id="fuchsia" onclick="submitk('fuchsia')"></div>
+                <div style="background-color: indigo" class="colorr" id="indigo" onclick="submitk('indigo')"></div>
+                <div style="background-color: chartreuse" class="colorr" id="chartreuse" onclick="submitk('chartreuse')">
+                </div>
+                <div style="background-color: darkmagenta" class="colorr" id="darkmagenta" onclick="submitk('darkmagenta')">
+                </div>
+            </div>
+            <h1>Body-Colour</h1>
+            <div class="bodyy">
+                <input type="hidden" id="iid" value="nothing" name="change">
+                <div style="background-color:black" class="colorr" id="black" onclick="submitit('black')">
+                </div>
+                <div style="background-color:deeppink" class="colorr" id="deeppink" onclick="submitit('deeppink')">
+                </div>
+                <div style="background-color: brown" class="colorr" id="brown" onclick="submitit('brown')">
+                </div>
+                <div style="background-color: cyan" class="colorr" id="cyan" onclick="submitit('cyan')"></div>
+                <div style="background-color: teal" class="colorr" id="teal" onclick="submitit('teal')"></div>
+                <div style="background-color: olivedrab " class="colorr" id="olivedrab" onclick="submitit('olivedrab')">
+                </div>
+                <div style="background-color: magenta" class="colorr" id="magenta" onclick="submitit('magenta')"></div>
+                <div style="background-color: mediumaquamarine" class="colorr" id="mediumaquamarine"
+                    onclick="submitit('mediumaquamarine')"></div>
+                <div style="background-color: thistle" class="colorr" id="thistle" onclick="submitit('thistle')"></div>
+                <div style="background-color: steelblue" class="colorr" id="steelblue" onclick="submitit('steelblue')">
+                </div>
+                <div style="background-color: silver" class="colorr" id="silver" onclick="submitit('silver')"></div>
+                <div style="background-color: maroon" class="colorr" id="maroon" onclick="submitit('maroon')"></div>
+            </div>
+            <button type="submit" class="btn btn-warning">Apply</button>
+        </form>
+    </div>

@@ -1,0 +1,28 @@
+<%- include("header") -%>
+    <h1>
+        <%= currentdayy %>
+    </h1>
+    <div class="parah">
+        <%for(var i=0;i<currentday.items.length;i++){%>
+            <form action="/delete" method="post">
+                <input type="checkbox" class="checkb" name="checkbox" value="<%=currentday.items[i]._id %>"
+                    onChange="this.form.submit()"></input>
+                <div class="box">
+                    <h5>
+                        <%= currentday.items[i].namee %>
+                    </h5>
+                </div>
+                <br>
+                <hr>
+                <input type="hidden" name="listname" value="<%= currentdayy %>"></input>
+            </form>
+            <%}%>
+    </div>
+    <form action="/" method="post">
+        <input type="text" class="form-control tyy" name="userinput" autocomplete="off">
+        <button class="btn btn-dark" type="submit" name="listname" value="<%= currentdayy %>">Add
+            Item</button>
+    </form>
+    </body>
+
+    </html>

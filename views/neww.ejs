@@ -1,0 +1,13 @@
+<%- include("header") -%>
+    <button class="btn btn-primary btn-lg" onclick="show()">Add A New List</button><br><br>
+    <form action="/neww" method="post">
+        <input class="typelist tyy form-control" name="newwinput" type="text" autocomplete="off"><button type="submit" name="submit" class="btn btn-warning typelist ty">Create</button>
+    </form>
+    <script type="text/javascript">
+        function show() {
+            document.getElementsByClassName("tyy")[0].classList.toggle("typelist");
+            document.getElementsByClassName("ty")[0].classList.toggle("typelist");
+        }
+    </script>
+    </body>
+    </html>
