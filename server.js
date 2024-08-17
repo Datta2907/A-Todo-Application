@@ -4,10 +4,9 @@ const bodyparser = require("body-parser");
 const _ = require("lodash");
 const mongoose = require('mongoose');
 const { identity } = require("lodash");
-mongoose.connect('mongodb://localhost:27017/tododb', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/tododb', {});
 const app = express();
 app.set('view engine', 'ejs');
-mongoose.set('useFindAndModify', false);
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({ extended: true }));
 const todoschema = {
@@ -174,4 +173,6 @@ app.get("/default/:custom", function (req, res) {
     });
     res.redirect("/neww/" + custom);
 });
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('Server started on port 3000');
+});
